@@ -22,6 +22,7 @@ Requires Python 3.4+ and Django 2.0+
 - Logging
 - Project version as global context variable
 - Daily backups
+- Dockerfile  config
 - travis-ci config
 - coveralls config
 - django-debug-toolbar
