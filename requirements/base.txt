@@ -1,6 +1,10 @@
 Django==2.2.1
-pytz==2019.1
-sqlparse==0.3.0
-psycopg2-2.8.2
-django-debug-toolbar-1.11
+django-appconf==1.0.3
+django-debug-toolbar==1.11
+django-user-accounts==2.1.0
+djangorestframework==3.9.4
 gunicorn==19.9.0
+psycopg2==2.8.2
+pytz==2019.1
+six==1.12.0
+sqlparse==0.3.0

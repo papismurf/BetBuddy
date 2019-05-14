@@ -33,13 +33,13 @@ INTERNAL_IPS = ['127.0.0.1']
 # Application definition
 
 INSTALLED_APPS = [
+    'django.contrib.sites',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'django.contrib.sites',
     'BetBud.apps.BetbudConfig',
     'debug_toolbar',
     'account',
@@ -136,3 +136,14 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 
 SITE_ID = 1
+
+# Django User Account Settings
+ACCOUNT_EMAIL_UNIQUE = True
+
+ACCOUNT_EMAIL_CONFIRMATION_REQUIRED = True
+
+ACCOUNT_EMAIL_CONFIRMATION_EMAIL = True
+
+ACCOUNT_PASSWORD_USE_HISTORY = True
+
+
