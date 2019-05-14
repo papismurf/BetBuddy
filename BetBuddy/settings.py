@@ -27,6 +27,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
+INTERNAL_IPS = ['127.0.0.1']
+
 
 # Application definition
 
@@ -39,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'BetBud.apps.BetbudConfig',
     'debug_toolbar',
+    'account',
 ]
 
 MIDDLEWARE = [
@@ -49,6 +52,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'debug_toolbar.middleware.DebugToolbarMiddleware',  # django-debug-toolbar middleware
+    "account.middleware.LocaleMiddleware",  # account middleware
+    "account.middleware.TimezoneMiddleware",  # account middleware continued
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
@@ -65,6 +70,7 @@ TEMPLATES = [
                 'django.template.context_processors.debug',
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
+                'account.context_processors.account'
                 'django.contrib.messages.context_processors.messages',
             ],
         },
