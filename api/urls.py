@@ -14,4 +14,4 @@ urlpatterns = [
         LogoutUserAPIView.as_view(),
         name='auth_user_logout')
 ]
-# fe8a534dd6159d2e4956251d65d5b32aefb0a5ba
+
