@@ -4,7 +4,8 @@ from django.urls import include, path
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('account/', include("account.urls"))
+    path('account/', include("account.urls")),
+    path('api/', include('api.urls')),
 ]
 
 # django-debug-toolbar configuration
