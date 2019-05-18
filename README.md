@@ -1,15 +1,15 @@
 # BetBud
-[![Build Status](https://travis-ci.org/bartromgens/django-project-template.svg?branch=master)](https://travis-ci.com/papismurf/paymo/) [![Coverage Status](https://coveralls.io/repos/github/bartromgens/django-project-template/badge.svg?branch=master)](https://coveralls.io/github/bartromgens/django-project-template?branch=master)
+[![Build Status](https://travis-ci.org/bartromgens/django-project-template.svg?branch=master)](https://travis-ci.com/papismurf/paymo/)  ![Coverage Status](https://coveralls.io/repos/github/bartromgens/django-project-template/badge.svg?branch=master)
 
-BetBud is an Django 2 + React Native Peer-to-Peer Betting App
+BetBud is a Django 2 + React Native Peer-to-Peer Betting App
 
-Requires Python 3.4+ and Django 2.0+
+Requires Python 3.6+ and Django 2.1+
 
 #### Configuration
 
-- Django 2.0 and React Native with Bootstrap 4
+- Django 2.0 and React Native
 - Django Rest Framework API
-- Example Django app, with empty views.py and models.py
+- Django backend handling business logic and authentication, with views.py and models.py etc.
 - Base page template with,
   - Top navbar with menu, sign up/log in, and user profile
   - Page content
@@ -23,7 +23,7 @@ Requires Python 3.4+ and Django 2.0+
 - Project version as global context variable
 - Daily backups
 - Dockerfile  config
-- travis-ci config
+- gcloud config
 - coveralls config
 - django-debug-toolbar
 
@@ -34,8 +34,8 @@ Requires Python 3.4+ and Django 2.0+
 
 Get the code and enter the project directory,
 ```
-git clone https://github.com/bartromgens/django-project-template.git
-cd django-project-template
+git clone https://github.com/papismurf/BetBuddy.git
+cd BetBuddy
 ```
 
 Install dependencies that you will need,
