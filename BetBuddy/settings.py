@@ -27,10 +27,13 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
+INTERNAL_IPS = ['127.0.0.1']
+
 
 # Application definition
 
 INSTALLED_APPS = [
+    'django.contrib.sites',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -38,7 +41,21 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'BetBud.apps.BetbudConfig',
+    'rest_framework',
+    'rest_framework.authtoken',
+    'debug_toolbar',
+    'account',
 ]
+
+# API (Development) Configurations MUST Update for Production
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework.authentication.TokenAuthentication',
+    ),
+    'DEFAULT_PERMISSION_CLASSES': (
+        'rest_framework.permissions.IsAuthenticated',
+    )
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -47,6 +64,9 @@ MIDDLEWARE = [
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
+    'debug_toolbar.middleware.DebugToolbarMiddleware',  # django-debug-toolbar middleware
+    "account.middleware.LocaleMiddleware",  # account middleware
+    "account.middleware.TimezoneMiddleware",  # account middleware continued
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
@@ -63,6 +83,7 @@ TEMPLATES = [
                 'django.template.context_processors.debug',
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
+                'account.context_processors.account',
                 'django.contrib.messages.context_processors.messages',
             ],
         },
@@ -125,3 +146,16 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
+
+SITE_ID = 1
+
+# Django User Account Settings
+ACCOUNT_EMAIL_UNIQUE = True
+
+ACCOUNT_EMAIL_CONFIRMATION_REQUIRED = False
+
+ACCOUNT_EMAIL_CONFIRMATION_EMAIL = False
+
+ACCOUNT_PASSWORD_USE_HISTORY = True
+
+
