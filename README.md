@@ -34,8 +34,8 @@ Requires Python 3.6+ and Django 2.1+
 
 Get the code and enter the project directory,
 ```
-git clone https://github.com/bartromgens/django-project-template.git
-cd django-project-template
+git clone https://github.com/papismurf/BetBuddy.git
+cd BetBuddy
 ```
 
 Install dependencies that you will need,
